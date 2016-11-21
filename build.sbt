@@ -1,5 +1,5 @@
 name          := """gss-aws-lambda"""
-organization  := "io.github.yeghishe"
+organization  := "ro.purecore.gss"
 version       := "0.0.1"
 scalaVersion  := "2.11.8"
 scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf8")
@@ -22,12 +22,12 @@ libraryDependencies ++= {
 lazy val root = project.in(file(".")).configs(IntegrationTest)
 Defaults.itSettings
 
-initialCommands := """|import io.github.yeghishe._
+initialCommands := """|import ro.purecore.gss._
                       |import io.github.yeghishe.lambda._
                       |import scala.concurrent._
                       |import scala.concurrent.duration._""".stripMargin
 
-jarName in assembly := s"${name.value}.jar"
+assemblyJarName in assembly := s"${name.value}.jar"
 assemblyMergeStrategy in assembly := {
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard
   case _ => MergeStrategy.first

@@ -1,4 +1,4 @@
-package io.github.yeghishe
+package ro.purecore.gss
 
 import com.amazonaws.services.lambda.runtime.Context
 
